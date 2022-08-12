@@ -208,7 +208,11 @@ These steps will create an initial deployment of `Sovereign Keys`. It will not b
 2. Use the `pipeline-template.yml` CloudFormation template file at the repo root to create a new stack in your AWS account, making sure you are in the intended region (eu-central-1, eu-west-3 and eu-west-1 are supported, and it should work in most regions). You can do it using the AWS console or via CLI, replace `<YourIdentifier>` by the prefix you use in your S3 bucket names:
     ```sh
     # Say you are at the root of the cloned repo
-    aws cloudformation create-stack --stack-name sk-stack --template-body file://pipeline-template.yml --capabilities CAPABILITY_NAMED_IAM --parameters ParameterKey=GloballyUniqueCompanyIdentifier,ParameterValue=<YourIdentifier>
+    aws cloudformation create-stack \
+  --stack-name sk-stack \
+  --template-body file://pipeline-template.yml \
+  --capabilities CAPABILITY_NAMED_IAM \
+  --parameters ParameterKey=GloballyUniqueCompanyIdentifier,ParameterValue=<YourIdentifier>
     ```
 3. Wait for the CloudFormation stack creation to finish (usually it takes ~5min).
     ```sh
