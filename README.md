@@ -220,7 +220,9 @@ These steps will create an initial deployment of `Sovereign Keys`. It will not b
     ```
 4. As part of this new CloudFormation stack, a CodeCommit repository have been created named `cc-sovereign-keys-repo`. If you are unsure, you can retrieve the exact name in the CloudFormation Console in the stacks Outputs or via CLI:
     ```sh
-    aws cloudformation describe-stacks --stack-name sk-stack --query "Stacks[0].Outputs[?OutputKey=='RepoName'||OutputKey=='RepoUrlSsh'||OutputKey=='RepoUrlHttp'].OutputValue"
+    aws cloudformation describe-stacks \
+  --stack-name sk-stack \
+  --query "Stacks[0].Outputs[?OutputKey=='RepoName'||OutputKey=='RepoUrlSsh'||OutputKey=='RepoUrlHttp'].OutputValue"
     ```
 5. Clone the (empty) CodeCommit repository. There are multiple ways to do that, via SSH or HTTPS, please refer to the [CodeCommit AWS documentation](https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-connect.html). Here is the command using the HTTPS URL and aws cli as a credential helper:
     ```sh
