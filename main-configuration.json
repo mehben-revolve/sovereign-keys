@@ -1,8 +1,9 @@
 {
     "Parameters": {
-        "ToggleMainResourceCreation": "false",
+        "ToggleMainResourceCreation": "true",
         "InstanceType": "t3.micro",
         "HsmType": "cloudhsm",
-        "ObjectLockMode": "GOVERNANCE"
+        "ObjectLockMode": "GOVERNANCE",
+        "AdditionalSecurityGroup": "sg-0f7d59421995d7dbc"
     }
 }
