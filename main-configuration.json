@@ -1,4 +1,4 @@
-{
+{ 
     "Parameters": {
         "ToggleMainResourceCreation": "false",
         "InstanceType": "t3.micro",
